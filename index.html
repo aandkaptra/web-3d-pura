@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pura Gelang Agung 3D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<model-viewer id="viewer" src="model/pura-kecil.glb" alt="Model 3D Pura Gelang Agung"
+  camera-controls interaction-prompt="none" environment-image="neutral"
+  exposure="1.1" shadow-intensity="1" loading="eager">
+
+  <div class="progress" id="progress" slot="progress-bar"><div class="bar" id="bar"></div></div>
+
+  <button class="hotspot" slot="hotspot-gapura"
+    data-position="28.319771131767382m 384.8299821411687m 7.761025636449027m"
+    data-normal="-0.07817090941376069m -0.04059626883687082m 0.99611307183369m"
+    data-id="gapura"><span>1</span><em>Gapura</em></button>
+
+  <button class="hotspot" slot="hotspot-bale"
+    data-position="34.24800060412908m 384.23094158699473m 2.519256298450336m"
+    data-normal="0.05040804548099924m 0.7889820751779888m -0.612344930573137m"
+    data-id="bale"><span>2</span><em>Bale</em></button>
+</model-viewer>
+
+<div class="loading" id="loading">Memuat model 3D <b id="persen">0%</b></div>
+
+<header class="title">
+  <h1>Pura Gelang Agung</h1>
+  <p>Model 3D untuk pelestarian budaya Bali</p>
+</header>
+
+<aside class="panel" id="panel">
+  <button class="kembali" id="kembali" type="button">Kembali</button>
+  <h2 id="judul"></h2>
+  <p id="isi"></p>
+</aside>
+
+<p class="hint">Seret untuk memutar, scroll untuk zoom, klik titik bernomor untuk melihat informasi.</p>
+<nav class="chips" id="daftar" aria-label="Daftar titik informasi"></nav>
+
+<div class="tools">
+  <button id="reset" type="button">Reset tampilan</button>
+  <button id="layar" type="button">Layar penuh</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
